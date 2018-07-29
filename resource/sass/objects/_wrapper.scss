@@ -1,0 +1,11 @@
+.wrapper {
+    @include transition;
+    @extend %box-sizing;
+    margin: 0px auto;
+    width: 100%;
+    @media #{$res-xl} {
+        max-width: 1200px;
+    }
+}
+
+

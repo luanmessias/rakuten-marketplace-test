@@ -1,0 +1,35 @@
+
+//SETTINGS - Config variables
+//======================================
+@import 'settings/settings';
+@import 'settings/icons';
+
+//TOOLS - Functions, mixins and placeholders
+//======================================
+@import 'tools/mixins';
+@import 'tools/placeholders';
+
+//GENERIC - Only * selector, Resets and normalizes
+//======================================
+@import 'generics/normalize';
+
+//ELEMENTS - Only HTML tags without class (headings, lists, Links etc..)
+//======================================
+@import 'elements/elements';
+@import 'elements/headings';
+
+//OBJECTS - Only objects that aplly a generic style on the page or little components like a searcharea, mailbox.
+//======================================
+@import 'objects/fontawesome';
+@import 'objects/animate';
+@import 'objects/wrapper';
+
+//COMPONENTS - All specifc stye for objects goes here.
+//======================================
+@import 'components/product';
+@import 'components/mainPhoto';
+@import 'components/productZoom';
+@import 'components/thumbs'
+
+//TRUMPS - Layer to add !important elements like a .hidden classs
+//======================================

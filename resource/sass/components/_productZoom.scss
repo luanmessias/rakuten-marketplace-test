@@ -1,0 +1,22 @@
+.zoomContainer {
+    .zoomWindow {
+        border: 5px solid $color-secondary-default;
+        border-top: 0px;
+        margin-left: 15px;
+        margin-top: -10px;
+        .zoomTitle {
+            @include flexbox(flex, row, nowrap, flex-start, center, center);
+            @include box-sizing;
+            background-color: $color-secondary-default;
+            width: 100%;
+            padding: 5px;
+            font-size: 12px;
+            color: #FFF;
+            text-align: left;
+            &:before {
+                @include set-icon($fa-var-search-plus, 20px, 900, #FFF);
+                margin-right: 5px;
+            }
+        }
+    }
+}
