@@ -1,4 +1,8 @@
 .zoomContainer {
+    display: none;
+    &.active{
+        display: block;
+    }
     .zoomWindow {
         border: 5px solid $color-secondary-default;
         border-top: 0px;

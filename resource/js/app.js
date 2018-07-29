@@ -15,7 +15,7 @@ mktApp.controller("rkCtrl", function ($scope) {
 
     //Detail info
     s.prodVideo    = s.detail.video;
-    console.log(s.prodVideo);
+
     //Img unavailable
     s.photoUnavailable = {
         "thumb" : "resource/img/unavailable_thumb.jpg",
@@ -30,6 +30,19 @@ mktApp.controller("rkCtrl", function ($scope) {
 
     //First Sku - Images 
     s.prodThumbs = s.skus[prodModifier].images;
+
+    s.showPhoto = function() {
+        jQuery(".mainPhoto__video").removeClass("active");
+        jQuery(".mainPhoto__zoom").addClass("active");
+        jQuery(".zoomContainer").addClass("active");
+    }
+    
+    s.showVideo = function() {
+        jQuery(".zoomContainer").removeClass("active");
+        jQuery(".mainPhoto__zoom").removeClass("active");
+        jQuery(".mainPhoto__video").addClass("active");
+    }
+    
  
 });
 
@@ -53,6 +66,8 @@ mktApp.directive('errSrc', function () {
         }
     }
 });
+
+
 
 
 
