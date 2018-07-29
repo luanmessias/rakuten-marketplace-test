@@ -31,19 +31,14 @@ mktApp.controller("rkCtrl", function ($scope) {
     //First Sku - Images 
     s.prodThumbs = s.skus[prodModifier].images;
 
-    s.showPhoto = function() {
-        jQuery(".mainPhoto__video").removeClass("active");
-        jQuery(".mainPhoto__zoom").addClass("active");
-        jQuery(".zoomContainer").addClass("active");
-    }
-    
-    s.showVideo = function() {
-        jQuery(".zoomContainer").removeClass("active");
-        jQuery(".mainPhoto__zoom").removeClass("active");
-        jQuery(".mainPhoto__video").addClass("active");
-    }
-    
- 
+    //Toggles
+    s.showVideo = false;
+    s.activeVideo = function() {
+        s.showVideo = true;
+    };
+    s.activePhoto = function() {
+        s.showVideo = false;
+    };
 });
 
 // Function for set Unavailable image if the image is undefined.

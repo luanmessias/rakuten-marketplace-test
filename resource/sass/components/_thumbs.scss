@@ -14,7 +14,7 @@
             border: 3px solid $color-secondary-dark;
         }
 
-        @include e("img"){
+        @include e("photo"){
             width: 100%;
             height: auto;
             @include box-sizing; 

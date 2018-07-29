@@ -33,21 +33,19 @@
 
         <div class="product__col">
             <div class="mainPhoto">
-                <div class="mainPhoto__video">
-                    <iframe width="100%" height="100%" ng-src="prodVideo"></iframe> 
-                </div>
-                <div class="mainPhoto__zoom active">
+                <div class="mainPhoto__zoom">
+                    <iframe class="mainPhoto__zoom__video" width="100%" height="100%" ng-src="prodVideo" ng-show="showVideo"></iframe>
                     <img class="mainPhoto__zoom__photo" data-zoom-image="{{ prodPhotoLarge }}" ng-src="{{ prodPhotoMedium }}" err-src="{{ photoUnavailable.detail }}">
                 </div>
             </div>
 
             <div id="thumbs" class="thumbs">
-                <a class="thumbs__item" ng-click="showPhoto()" data-image="{{ prodThumb.detail }}" data-zoom-image="{{ prodThumb.extended }}" ng-repeat="prodThumb in prodThumbs">
-                    <img class="thumbs__item__photo"  ng-src="{{ prodThumb.thumb }}" err-src="{{ photoUnavailable.thumb }}">
+                <a class="thumbs__item" data-image="{{ prodThumb.detail }}" data-zoom-image="{{ prodThumb.extended }}" ng-repeat="prodThumb in prodThumbs">
+                    <img class="thumbs__item__photo" ng-click="activePhoto()"  ng-src="{{ prodThumb.thumb }}" err-src="{{ photoUnavailable.thumb }}">
                 </a>
-                <a class="thumbs__item" ng-click="showVideo()">
+                <div class="thumbs__item" ng-click="activeVideo()">
                     <i class="thumbs__item__video fab fa-youtube"></i>
-                </a>
+                </div>
             </div>
 
         </div>
