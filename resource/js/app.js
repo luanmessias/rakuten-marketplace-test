@@ -76,8 +76,7 @@ jQuery(window).load(function () {
         scrollZoom: true,
         cursor: "crosshair",
         zoomWindowFadeIn: 500,
-        zoomWindowFadeOut: 750,
-        loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif'
+        zoomWindowFadeOut: 750
     });
 
 
