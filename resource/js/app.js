@@ -14,7 +14,7 @@ mktApp.controller("rkCtrl", function ($scope) {
     s.related  = s.prod.relatedProducts;
 
     //Detail info
-    s.prodVideo    = s.detail.video;
+    s.prodVideo = s.detail.video;
 
     //Img unavailable
     s.photoUnavailable = {
