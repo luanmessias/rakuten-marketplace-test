@@ -1,5 +1,9 @@
 .thumbs{
     @include flexbox(flex, row, nowrap, flex-start, center, center);
+    @media #{$res-sm}{
+        @include flexbox(flex, row, nowrap, center, center, center);
+        margin-bottom: 35px;
+    }
     margin-top: 20px;
     @include e("item"){
         @include box-sizing;

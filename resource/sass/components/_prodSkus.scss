@@ -1,0 +1,51 @@
+.sku {
+    background-color: #cdcdcd;
+    margin-top: 20px;
+    @include e("title") {
+        @include flexbox(flex, row, nowrap, flex-start, center, center);
+        @include fonte($system-font, bold, 18px, #e5e5e5);
+        background-color: $color-primary-dark;
+        padding: 5px 0px;
+        &:before {
+            @include set-icon($fa-var-bars, 25px, 900, #e5e5e5);
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+    @include e("content") {
+        padding: 20px;
+        padding-bottom: 5px;
+        @include e("title") {
+            @include flexbox(flex, row, nowrap, flex-start, center, center);
+            background-color: #b8b8b8;
+            width: 100%;
+            > strong{
+                @include fonte($system-font, bold, 14px, #e5e5e5);
+                background-color: #727272;
+                display: block;
+                padding: 3px 5px;
+            }
+        }
+        
+        @include e("group") {
+            @include flexbox(flex, row, nowrap, flex-start, center, center);
+            margin-bottom: 20px;
+            padding: 10px;
+            @include e("item") {
+                @include fonte($system-font, bold, 14px, #727272);
+                @include transition;
+                @extend %center-cont;
+                border: 1px solid #727272;
+                margin-right: 10px;
+                padding: 5px;
+                cursor: pointer;
+                &:hover,
+                &.active{
+                    @include fonte($system-font, bold, 14px, #e5e5e5);
+                    background-color: $color-secondary-light;
+                    border-color:  $color-secondary-light;
+                }
+            }
+        }
+    }
+}

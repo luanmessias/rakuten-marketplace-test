@@ -1,0 +1,19 @@
+.star{
+    @extend %center-cont;
+    width: 70px;
+    height: 50px;
+    text-align: center;
+
+    @media #{$res-sm}{
+        width: 85px;
+    }
+
+    @include e("value"){
+        @include fonte($system-font, 600, 18px, #FFF);
+        z-index: 1;
+    }
+    &:after{
+        @include set-icon($fa-var-star, 50px, 900, $color-secondary-light);
+        position: absolute;
+    }
+}

@@ -1,0 +1,22 @@
+.offers{
+    @include flexbox(flex, column, nowrap, flex-start, flex-start, flex-start);
+    @include e("from"){
+        @include fonte($system-font, 600, 18px, $color-primary-dark);
+        text-decoration: line-through;
+    }
+
+    @include e("to"){
+        @include fonte($system-font, 800, 36px, $color-secondary-light);
+        > em{
+            font-size: 25px;
+        }
+    }
+
+    @include e("parcel"){
+        @include fonte($system-font, 600, 14px, $color-primary-dark);
+    }
+
+    @include e("discount"){
+        @include fonte($system-font, 600, 14px, $color-primary-dark);
+    }
+}

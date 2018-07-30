@@ -1,0 +1,44 @@
+.related{
+    margin-top: 30px;
+    width: 100%;
+    
+    @include flexbox(flex, row, wrap, flex-start, initial, flex-start);
+    @include e("title"){
+        @include flexbox(flex, row, nowrap, flex-start, center, center);
+        @include fonte($system-font, normal, 20px, #e5e5e5);
+        background-color: $color-primary-dark;
+        padding: 10px;
+        width: 100%;
+    }
+
+    @include e("box"){
+        @include box-sizing();
+        width: calc(33.33333333% - 20px);
+        margin: 10px;
+        padding: 10px;
+        background-color: #c7c7c7;
+        position: relative;
+        text-align: center;
+
+        @media #{$res-sm}{
+            width: calc(50% - 20px);
+            word-break: break-all;
+        }
+        
+        @include e("photo"){
+            width: 100%;
+            height: auto;
+        }
+        @include e("name"){
+            @include fonte($system-font, normal, 18px, #292929);
+            margin-bottom: 5px;
+        }
+        @include e("price"){
+            @include fonte($system-font, bold, 16px, #3d3d3d);
+        }
+        
+        @include e("parcels"){
+            @include fonte($system-font, bold, 16px, #3d3d3d);
+        }
+    }
+}

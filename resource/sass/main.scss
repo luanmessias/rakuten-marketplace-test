@@ -21,15 +21,27 @@
 //OBJECTS - Only objects that aplly a generic style on the page or little components like a searcharea, mailbox.
 //======================================
 @import 'objects/fontawesome';
+@import 'objects/ratingStars';
 @import 'objects/animate';
 @import 'objects/wrapper';
 
 //COMPONENTS - All specifc stye for objects goes here.
 //======================================
-@import 'components/product';
-@import 'components/mainPhoto';
-@import 'components/productZoom';
-@import 'components/thumbs'
+@import 'components/prodContainers';
+@import 'components/prodInfo';
+@import 'components/prodOffers';
+@import 'components/prodPhoto';
+@import 'components/prodSkus';
+@import 'components/prodThumbs';
+@import 'components/prodZoom';
+@import 'components/prodBuy';
+@import 'components/prodPoints';
+@import 'components/prodRating';
+@import 'components/prodTools';
+@import 'components/prodModals';
+@import 'components/prodDesc';
+@import 'components/prodReviews';
+@import 'components/prodRelated';
 
 //TRUMPS - Layer to add !important elements like a .hidden classs
 //======================================

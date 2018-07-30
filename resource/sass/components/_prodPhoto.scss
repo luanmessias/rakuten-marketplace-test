@@ -1,13 +1,23 @@
 .mainPhoto {
     @include box-sizing;
-    @include box-shadow(0,0,10px,rgb(59, 59, 59));
+    @include transition;
     border: 10px solid #e9e9e9;
     position: relative;
+    
     @include e("zoom") {
         @include box-sizing;
         background-color: #e9e9e9;
         width: 100%;
         height: auto;
+        
+        @media #{$res-xl}{
+            min-height: 475px;
+        }
+
+        @media #{$res-sm}{
+            min-height: unset;
+        }
+
         @include e("photo") {
             @include box-sizing;
             width: 100% !important;

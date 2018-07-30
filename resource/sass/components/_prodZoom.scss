@@ -1,4 +1,7 @@
 .zoomContainer {
+    @media #{$res-sm}{
+        display: none !important;
+    }
     .zoomWindow {
         border: 5px solid $color-secondary-default;
         border-top: 0px;
@@ -18,5 +21,10 @@
                 margin-right: 5px;
             }
         }
+    }
+}
+.zoomWrapper{
+    @media #{$res-sm}{
+        
     }
 }

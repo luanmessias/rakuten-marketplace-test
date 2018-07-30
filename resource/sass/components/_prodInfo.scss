@@ -1,0 +1,27 @@
+.prodinfo{
+    @include flexbox(flex, row, wrap, flex-start, flex-start, flex-start);
+    
+    @media #{$res-sm}{
+        padding: 15px;
+    }
+
+    @include e("name"){
+        @include fonte($system-font, 600, 26px, $color-primary-dark);
+        display: block;
+        width: 100%;
+    }
+
+    @include e("code"){
+        @include fonte($system-font, 400, 14px, $color-primary-dark);
+        display: block;
+        &:after{
+            content: "|";
+            margin: 0px 5px;
+        }
+    }
+
+    @include e("brand"){
+        @include fonte($system-font, 400, 14px, $color-primary-dark);
+        display: block;
+    }
+}

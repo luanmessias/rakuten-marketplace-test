@@ -18,13 +18,13 @@ $brand-font: "Font Awesome 5 Brands";
 
 //SETTINGS - COLORS
 //=======================================================================
-$color-primary-default:rgb(75, 75, 75);
+$color-primary-default:#868686;
 $color-primary-light:#adadad;
-$color-primary-dark: #cecece;
+$color-primary-dark: #474747;
 
-$color-secondary-default: rgb(138, 39, 39);
-$color-secondary-light: rgb(177, 62, 62);
-$color-secondary-dark:rgb(107, 29, 29);
+$color-secondary-default: #8a2727;
+$color-secondary-light: #b13e3e;
+$color-secondary-dark:#6b1d1d;
 
 
 //SETTINGS - SOCIAL COLORS
@@ -60,8 +60,16 @@ $res-300: "(max-width: 300px)";
 $res-350: "(max-width: 350px)";
 $res-400: "(max-width: 400px)";
 $res-xs: "(max-width: 575px)";
-$res-sm: "(min-width: 576px) and (max-width: 767px)";
+$res-sm: "(min-width: 300px) and (max-width: 767px)";
 $res-md: "(min-width: 768px) and (max-width: 991px)";
-$res-lg: "(min-width: 992px) and (max-width: 1199px)";
-$res-xl: "(min-width: 1200px)";
+$res-lg: "(min-width: 992px) and (max-width: 999px)";
+$res-xl: "(min-width: 1000px)";
 
+@media #{$res-300}{}
+@media #{$res-350}{}
+@media #{$res-400}{}
+@media #{$res-xs}{}
+@media #{$res-sm}{}
+@media #{$res-md}{}
+@media #{$res-lg}{}
+@media #{$res-xl}{}

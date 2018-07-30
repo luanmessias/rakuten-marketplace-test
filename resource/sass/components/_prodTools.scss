@@ -1,0 +1,41 @@
+.tools{
+    @include flexbox(flex, row, wrap, space-between, inherit, flex-start);
+    width: 100%;
+    margin-top: 10px;
+
+    &__rate,
+    &__delivery,
+    &__size{
+        @include flexbox(flex, row, nowrap, space-between, center, center);
+        @include fonte($system-font, 400, 12px, #FFF);
+        @include transition;
+        @include box-sizing;
+        background-color: $color-primary-light;
+        cursor: pointer;
+        padding: 5px 10px;
+        width: calc(33.333% - 10px);
+        &:hover{
+            background-color: $color-primary-default;
+        }
+        &:before{
+            margin-right: 10px;
+        }
+    }
+
+    @include e("rate"){
+        &:before{
+            @include set-icon($fa-var-star, 20px, 900, #FFF);
+        }
+    }
+    @include e("delivery"){
+        &:before{
+            @include set-icon($fa-var-truck, 20px, 900, #FFF);
+        }
+    }
+    @include e("size"){
+        &:before{
+            @include set-icon($fa-var-table, 20px, 900, #FFF);
+        }
+    }
+
+}

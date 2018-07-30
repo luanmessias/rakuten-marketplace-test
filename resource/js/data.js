@@ -2,10 +2,10 @@ var ProductData = {
 	"productDetails" : {
 		"code" : "lp001tc",
 		"name" : "Capacho - Trouxe Cerveja",
-		"brand" : "Limpa p�",
+		"brand" : "Limpa Pé",
 		"description" : "<p><strong>Capacho - Trouxe Cerveja?</strong><br>Fibra vin�lica entrela�ada de 10 mm de altura.</p><p><strong>Recomenda��es da Limpa P�:</strong> Trouxe Cerveja? � o capacho mais famoso da Limpa P�. Sim! O mais querido dos mais queridos. �timo para deixar perto da churrasqueira ou quintais de entrada de festa. Faz a alegria da galera e vira coment�rio de todo churrasco... Mas e ai??? Trouxe Cerveja? </p><p><strong>Deixe sua porta famosa:</strong> Adorou o capacho na sua porta? Ent�o entre em <a href='http://limpape.loja.rakuten.com.br/institucional/5/615E30AD-EF39-4B5B-B78E-FC475449FFA5/'>contato</a>. Preencha seus dados que entraremos em contato para que voc� envie uma foto da sua porta.Colocaremos uma lista de portas famosas aqui!</p><a id='a-portas-famosas'></a><h3><span>Portas Famosas!</span></h3><ul>    <li>    <span>Fabiola (SC)</span>    <img alt='' src='http://resources.rakuten.com.br/Assets/limpape.loja.rakuten.com.br/images/layout/trouxe-cerveja-1.jpg' title='Capacho trouxe cerveja - Fabiola - SC'></li>    <li>    <span>Ricardo (SC)</span>    <img alt='' src='http://resources.rakuten.com.br/Assets/limpape.loja.rakuten.com.br/images/layout/trouxe-cerveja-2.jpg' title='Capacho trouxe cerveja - Ricardo - SC'></li></ul>",
 		"features" : "<p><strong>Mat�ria-Prima:</strong> PVC<br>PVC � um plastico derivado do petr�leo.<br>Eletronicamente recortado e colado por vulcaniza��o t�rmica.<br>Material at�xico, leve, resistente, anti-chamas, antiderrapante, dur�vel, ret�m sujeira e f�cil de lavar.<br>Tapete de uso interno e externo.</p><p><strong><strong>Infogr�fico:</strong> Como meu capacho � confeccionado?</strong></p><div class='infografico'><img class='info' alt='Meu Capacho Personalizado' src='http://resources.rakuten.com.br/Assets/limpape.loja.rakuten.com.br/images/layout/Infografico-Limpa-Pe-p1.jpg'><img class='info' alt='Meu Capacho Personalizado' src='http://resources.rakuten.com.br/Assets/limpape.loja.rakuten.com.br/images/layout/Infografico-Limpa-Pe-p2.jpg'><img class='info' alt='Meu Capacho Personalizado' src='http://resources.rakuten.com.br/Assets/limpape.loja.rakuten.com.br/images/layout/Infografico-Limpa-Pe-p3.jpg'></div><p><strong>Qual o melhor capacho para minha casa?</strong></p><div class='img'><img class='doors' alt='Exemplo de capachos em portas pad�o' src='http://resources.rakuten.com.br/Assets/limpape.loja.rakuten.com.br/images/layout/Exemplo-Portas.png'></div>",
-		"video" : "https://www.youtube.com/embed/JRKjUmtAkbw",
+		"video" : "https://www.youtube.com/embed/MU2tLPPSeXA",
 		"superpoints" : 75,
 		"categories" : [
 			"Artesanato e Decora��o",
@@ -63,7 +63,7 @@ var ProductData = {
 				},
 				{
 					"name" :  "Tamanho",
-					"value" : "M�dio"
+					"value" : "Médio"
 				}
 			],
 			"images": [
@@ -168,7 +168,7 @@ var ProductData = {
 				},
 				{
 					"name" :  "Tamanho",
-					"value" : "M�dio"
+					"value" : "Médio"
 				}
 			],
 			"images": [

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="./resource/css/test.css">
+    <link rel="stylesheet" type="text/css" href="./resource/fancybox/jquery.fancybox.min.css">
     <link rel="stylesheet" type="text/css" href="./resource/css/main.css">
     <title>Document</title>
 
@@ -15,35 +16,38 @@
     <script type="text/javascript" src="./resource/angular/angular.min.js"></script>
     <script type="text/javascript" src="./resource/angular/angular-animate.min.js"></script>
     <script type="text/javascript" src="./resource/angular/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="./resource/angular/angular-filter.js"></script>
     <!-- Jquery -->
     <script type="text/javascript" src="./resource/jquery/jquery-1.8.3.min.js"></script>
     <!-- Elevate Zoom -->
     <script type="text/javascript" src="./resource/elevatezoom/jquery.elevatezoom.js"></script>
+    <!-- Fancybox -->
+    <script type="text/javascript" src="./resource/fancybox/jquery.fancybox.min.js"></script>
     <!-- App -->
     <script type="text/javascript" src="./resource/js/app.js"></script>
 </head>
 
-<body>
-
+<body ng-app="mktApp" ng-controller="rkCtrl" data-ng-init="loadProd()">
+    
     <header>
 
     </header>
 
-    <main class="product" ng-app="mktApp" ng-controller="rkCtrl">
-
+    <main class="product" ng-repeat="sku in skus | where:{partNumber: partNumber}" on-finish-render="initZoom()">
         <div class="product__col">
-            
             <div class="mainPhoto">
-                   
+
                 <div class="mainPhoto__zoom">
-                    <iframe class="mainPhoto__zoom__video" width="100%" height="100%" ng-src="{{ prodVideo }}" ng-src="" ng-show="showVideo"></iframe>
-                    <img class="mainPhoto__zoom__photo" data-zoom-image="{{ prodPhotoLarge }}" ng-src="{{ prodPhotoMedium }}" err-src="{{ photoUnavailable.detail }}">
+                    <iframe class="mainPhoto__zoom__video" data-yt-id="{{ prodVideo }}" ng-show="showVideo" width="100%" height="100%" frameborder="0" allow="encrypted-media"></iframe>
+                    <img class="mainPhoto__zoom__photo" data-zoom-image="{{ imgFirst.extended }}" ng-src="{{ imgFirst.detail }}" err-src="{{ photoUnavailable.detail }}" ng-repeat="imgFirst in sku.images | limitTo:1" >
+
                 </div>
+                
             </div>
 
             <div id="thumbs" class="thumbs">
-                <a class="thumbs__item" data-image="{{ prodThumb.detail }}" data-zoom-image="{{ prodThumb.extended }}" ng-repeat="prodThumb in prodThumbs">
-                    <img class="thumbs__item__photo" ng-click="activePhoto()" ng-src="{{ prodThumb.thumb }}" err-src="{{ photoUnavailable.thumb }}">
+                <a class="thumbs__item" data-image="{{ skuImg.detail }}" data-zoom-image="{{ skuImg.extended }}" ng-repeat="skuImg in sku.images">
+                    <img class="thumbs__item__photo" ng-click="activePhoto()" ng-src="{{ skuImg.thumb }}" err-src="{{ photoUnavailable.thumb }}">
                 </a>
                 <div class="thumbs__item" ng-click="activeVideo()">
                     <i class="thumbs__item__video fab fa-youtube"></i>
@@ -54,9 +58,191 @@
 
         <div class="product__col">
 
+            <div class="info">
+                <div class="prodinfo">
+                    <span class="prodinfo__name" ng-bind="prodName"></span>
+                    <span class="prodinfo__code"><strong>Código: </strong> <span ng-bind="prodCode"></span> </span>
+                    <span class="prodinfo__brand"><strong>Marca: </strong> <span ng-bind="prodBrand"></span> </span>
+                </div>
+                <div class="star"><span class="star__value" ng-bind="calcReviews()"></span></div>
+            </div>
+
+            <div class="sku">
+
+                <span class="sku__title">
+                    Opções do produto
+                </span>
+
+                <div class="sku__content">
+
+                    <span class="sku__content__title"><strong>Cor</strong></span>
+                    <div id="groupColor" class="sku__content__group sku__content__group">
+                        <div class="sku__content__group__item"  ng-repeat="prodSku in prodSkus | createarray: 'variations' | unique: 'value' | where:{name: 'Cor'}" ng-class="{active: checkColor(prodSku.value, sku.partNumber )}" ng-click="changeColor(prodSku.value); resetQtd()">
+                            {{ prodSku.value }}  
+                        </div>
+                    </div>
+
+                    <span class="sku__content__title"><strong>Tamanho</strong></span>
+                    <div id="groupSize" class="sku__content__group">
+                        <div class="sku__content__group__item" ng-repeat="prodSku in prodSkus | createarray: 'variations' | unique: 'value' | where:{name: 'Tamanho'}" ng-class="{active: checkSize(prodSku.value, sku.partNumber)}" ng-click="changeSize(prodSku.value); resetQtd()">
+                            {{ prodSku.value }}  
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="prices">
+
+                <div class="offers">
+                    <span class="offers__from"><em>R$ </em> <span ng-bind="sku.priceReal"></span></span>
+                    <span class="offers__to"><em>R$ </em> <span ng-bind="sku.pricePromotional"></span></span>
+                    <span class="offers__parcel" ng-bind="sku.parcels"></span>
+                    <span class="offers__discount" ng-bind="sku.discount"></span>
+                </div>
+
+                <div class="buy">
+                    <div class="buy__qtd">
+                        <span class="buy__qtd__title">Quantidade</span>
+                        <div class="buy__qtd__form">
+                            <div class="buy__qtd__form__minus" ng-click="qtdMinus(qtdInput)" ng-class="{disabled: qtdInput == 1}"></div>
+                            <input type="text" class="buy__qtd__form__input" name="qtd" id="quantity" value="{{qtdInput}}" ng-max="{{sku.stock}}" disabled></select>
+                            <div class="buy__qtd__form__plus" ng-click="qtdPlus(qtdInput, sku.stock)" ng-class="{disabled: qtdInput == sku.stock}"></div>
+                        </div>
+                    </div>
+                    <a class="buy__button" href="#">COMPRAR</a>
+                </div>
+
+                <div class="points">
+                    <span class="points__first">COMPRE E</span>
+                    <span class="points__second">GANHE</span>
+                    <span class="points__number" ng-bind="prodPoints"></span>
+                    <span class="points__third">PONTOS!</span>
+                    <a href="#" class="points__link">SAIBA MAIS</a>
+                </div>
+
+            </div>
+
+            <div class="tools">
+                <a data-fancybox data-animation-duration="500" data-options='{"src": "#rateModal", "touch": false}'  href="javascript:;" class="tools__rate">AVALIAR PRODUTO</a>
+                <a data-fancybox data-animation-duration="500" data-options='{"src": "#deliveryModal", "touch": false}'  href="javascript:;"  class="tools__delivery">CALCULAR ENTREGA</a>
+                <a data-fancybox href="resource/img/tabela.jpg" class="tools__size">TABELA DE MEDIDAS</a>
+            </div>
+
         </div>
 
+        <div class="product__row">
+            <div class="reviews">
+
+                <h2 class="reviews__title">
+                    AVALIAÇÃO DOS CLIENTES
+                </h2>
+
+                <div class="reviews__box" ng-repeat="review in reviews">
+                   <div class="reviews__box__name" ng-bind="review.customerName"></div>
+                   <div class="reviews__box__email" ng-bind="review.customerEmail"></div>
+                   <div class="reviews__box__rating">
+                       <span class="reviews__box__rating__star" ng-bind="review.rating"></span>
+                   </div>
+                   <div class="reviews__box__desc" ng-bind="review.comment"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="product__row">
+            <div class="description">
+                <h2 class="description__title">DESCRIÇÃO</h2>
+                <div class="description__content" ng-bind-html="detail.description"></div>
+            </div>
+
+            <div class="description">
+                <h2 class="description__title">FEATURES</h2>
+                <div class="description__content" ng-bind-html="detail.features"></div>
+            </div>
+        </div>
+
+
+        <div class="product__row">
+                <div class="related">
+    
+                    <h2 class="related__title">
+                        PRODUTOS RELACIOTNADOS
+                    </h2>
+    
+                    <div class="related__box" ng-repeat="prod in related">
+                        <img class="related__box__photo"  ng-src="{{ prod.image }}" err-src="{{ photoUnavailable.detail }}" >
+                        <div class="related__box__name" ng-bind="prod.name"></div>
+                        <div class="related__box__price" ng-bind="prod.price"></div>
+                        <div class="related__box__parcels" ng-bind="prod.parcels"></div>
+                    </div>
+    
+                </div>
+            </div>
     </main>
+
+    <div style="display:none" id="rateModal" class="modal">
+        <div class="modal__title">
+            <i class="fas fa-star"></i>
+            AVALIAE ESTE PRODUTO
+        </div>
+        <div class="modal__content">
+            <form name="rateForm" action="">
+                <div class="modal__content__rate">
+
+                    <input class="modal__content__rate__text" type="text" name="name" ng-model="name" id="ratName" placeholder="Nome" required>
+                    <input class="modal__content__rate__text" type="email" name="email" ng-model="email" id="ratMail" placeholder="E-Mail" required>
+                    <textarea class="modal__content__rate__textarea" name="comment" ng-model="comment" id="ratComment" cols="30" rows="10"  placeholder="Mensagem" required></textarea>
+
+                    <fieldset class="rating">
+                        <input type="radio" id="star5" name="rating" ng-model="rating" value="5" required />
+                        <label class="full" for="star5" title="Awesome - 5 stars"></label>
+                        <input type="radio" id="star4" name="rating" ng-model="rating" value="4" required />
+                        <label class="full" for="star4" title="Pretty good - 4 stars"></label>
+                        <input type="radio" id="star3" name="rating" ng-model="rating" value="3" checked="checked" required />
+                        <label class="full" for="star3" title="Meh - 3 stars"></label>
+                        <input type="radio" id="star2" name="rating" ng-model="rating" value="2" required />
+                        <label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+                        <input type="radio" id="star1" name="rating" ng-model="rating" value="1" required />
+                        <label class="full" for="star1" title="Sucks big time - 1 star"></label>
+                    </fieldset>
+
+                    <a href="#" class="modal__content__rate__send"  ng-disabled="rateForm.$pristine || rateForm.$invalid" ng-hide="rateForm.$pristine|| rateForm.$invalid" ng-click="putReview(name, email, comment, rating); calcReviews()">AVALIAR PRODUTO</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <div style="display:none" id="deliveryModal" class="modal">
+        <div class="modal__title">
+            <i class="fas fa-truck"></i>
+            CALCULAR ENTREGA
+        </div>
+        <div class="modal__content">
+            <form name="cepForm" action="">
+                <div class="modal__content__rate">
+                    <input class="modal__content__rate__text" type="text" name="cep" ng-model="cep" id="ratName" maxlength="9" placeholder="Digite seu CEP" OnKeyPress="formatar('#####-###', this)" ng-maxlength="9" ng-keypress="calcCep(cep)" required>
+                    <div class="deliveryResult" ng-if="cep.length == 9">
+                        <div class="deliveryResult__box">
+                            <i class="deliveryResult__box__icon fas fa-truck-moving"></i>
+                            <span class="deliveryResult__box__text" ng-bind="cepService"></span>
+                        </div>
+                        <div class="deliveryResult__box">
+                            <i class="deliveryResult__box__icon fas fa-money-check-alt"></i>
+                            <span class="deliveryResult__box__text"><span>R$ </span><span ng-bind="cepValue"></span></span>
+                        </div>
+                        <div class="deliveryResult__box">
+                            <i class="deliveryResult__box__icon fas fa-stopwatch"></i>
+                            <span class="deliveryResult__box__text"><span ng-bind="cepTime"></span><span> Dias Úteis</span></span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <footer>
 

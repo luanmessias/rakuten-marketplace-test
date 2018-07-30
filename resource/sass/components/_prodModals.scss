@@ -1,0 +1,86 @@
+.modal {
+    @include transition;
+    padding: 0px;
+    height: auto;
+    min-width: 350px;
+    background-color: #D3D3D3;
+    .fancybox-close-small {
+        color: #FFF;
+    }
+    @include e("title") {
+        @include flexbox(flex, row, wrap, flex-start, center, center);
+        @include fonte($system-font, 600, 16px, #FFF);
+        @include box-sizing;
+        background-color: $color-secondary-light;
+        width: 100%;
+        padding: 13px;
+        >i {
+            display: block;
+            margin-right: 10px;
+        }
+        &i:before {
+            color: #FFF;
+            font-size: 20px;
+        }
+    }
+    @include e("content") {
+        @include box-sizing;
+        padding: 10px;
+        @include e("rate") {
+            @include flexbox(flex, column, nowrap, flex-start, center, center);
+            &__text,
+            &__textarea {
+                @include box-sizing;
+                background-color: #e6e6e6;
+                width: 100%;
+                border: 0px;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+            @include e("text") {
+                height: 40px;
+            }
+            @include e("send") {
+                @include flexbox(flex, row, nowrap, center, center, center);
+                @include fonte($system-font, 600, 18px, #FFF);
+                @include transition;
+                @include box-sizing;
+                @extend %center-cont;
+                background-color: $color-secondary-light;
+                width: 100%;
+                padding: 10px 35px;
+                &:hover {
+                    background-color: $color-secondary-default;
+                }
+            }
+        }
+
+    }
+   
+}
+
+.deliveryResult{
+    @include box-sizing;
+    width: 100%;
+    @include e("box") {
+        @include flexbox(flex, row, nowrap, flex-start, center, center); 
+        @include box-sizing;
+        width: 100%;
+        background-color: $color-primary-default;
+        text-align: center;
+        margin-bottom: 10px;
+        @include e("icon") {   
+            @extend %center-cont;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            font-size: 20px;
+            color: #FFF;
+            margin-right: 5px;
+            background-color: $color-primary-dark;
+        }
+        @include e("text") {  
+            @include fonte($system-font, 600, 18px, #e0e0e0);
+        } 
+    }
+}

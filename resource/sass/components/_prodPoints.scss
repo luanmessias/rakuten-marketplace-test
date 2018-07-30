@@ -1,0 +1,105 @@
+.points{
+    @include transition;
+    background-color: $color-primary-default;
+  
+
+    @media #{$res-xs}{
+        padding: 20px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    @media #{$res-sm}{
+        padding: 20px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    @media #{$res-md}{
+        padding: 20px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    @media #{$res-lg}{
+        @include flexbox(flex, row, wrap, flex-start, center, center);
+        width: 100%;
+        text-align: center;
+    }
+    @media #{$res-xl}{
+        @include flexbox(flex, column, wrap, flex-start, center, center);
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        height: 100%;
+        width: 100px;
+    }
+
+    &:before{
+        @include set-icon($fa-var-coins, 50px, 900, rgb(241, 188, 12));
+        padding: 10px 0px;
+        margin-top: 10px;
+
+        @media #{$res-md}{
+            display: none;
+        }
+        @media #{$res-lg}{
+            display: none;
+        }
+    }
+
+    @include e("first"){
+        @include fonte($system-font, 400, 14px, #FFF);
+        @include transition;
+    }
+
+    @include e("second"){
+        @include fonte($system-font, 400, 14px, #FFF);
+        @include transition;
+    }
+
+    @include e("number"){
+        @include fonte($system-font, 900, 25px, rgb(241, 188, 12));
+        @include transition;
+    }
+
+    @include e("third"){
+        @include fonte($system-font, 400, 14px, #FFF);
+        @include transition;
+    }
+
+    @include e("link"){
+        @include transition;
+        @include fonte($system-font, 400, 14px, #FFF);
+        @include box-sizing;
+        @include transition;
+        background-color: $color-secondary-light;
+        margin-top: auto;
+        padding: 10px 0px;
+        width: 100%;
+        text-align: center; 
+        &:hover{
+            background-color: $color-secondary-default;
+        }
+
+
+        @media #{$res-xs}{
+            width: 100%;
+            margin-top: 10px;
+            display: block;
+        }
+        
+        @media #{$res-sm}{
+            width: 100%;
+            margin-top: 10px;
+            display: block;
+        }
+
+
+        @media #{$res-md}{
+            width: 100%;
+            margin-top: 10px;
+            display: block;
+        }
+    }
+
+}

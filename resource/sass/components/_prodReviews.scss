@@ -1,0 +1,65 @@
+.reviews{
+    margin-top: 30px;
+    width: 100%;
+    @include flexbox(flex, row, wrap, flex-start, initial, flex-start);
+    @include e("title"){
+        @include flexbox(flex, row, nowrap, flex-start, center, center);
+        @include fonte($system-font, normal, 20px, #e5e5e5);
+        background-color: $color-primary-dark;
+        padding: 10px;
+        width: 100%;
+    }
+
+    @include e("box"){
+        @include box-sizing();
+        width: calc(33.33333333% - 20px);
+
+        @media #{$res-sm}{
+            width: calc(50% - 20px);
+            word-break: break-all;
+        }
+        
+        margin: 10px;
+        padding: 10px;
+        background-color: #c7c7c7;
+        position: relative;
+        @include e("name"){
+            @include fonte($system-font, normal, 18px, #aaaaaa);
+            background: #414141;
+            padding-left: 32px;
+            @media #{$res-sm}{
+                padding-left: 15px;
+            }
+
+        }
+        @include e("email"){
+            @include fonte($system-font, normal, 18px, #3d3d3d);
+            padding-left: 32px;
+            margin: 10px 0px;
+            @media #{$res-sm}{
+                padding-left: 15px;
+            }
+        }
+        @include e("rating"){
+            position: absolute;
+            top: -5px;
+            left: -10px;
+            @extend %center-cont;
+            width: 45px;
+            height: 50px;
+            text-align: center;
+            @include e("star"){
+                @include fonte($system-font, 600, 18px, #FFF);
+                z-index: 1;
+            }
+            &:after{
+                @include set-icon($fa-var-star, 40px, 900, $color-secondary-light);
+                position: absolute;
+            }
+        }
+        @include e("desc"){
+            padding: 20px;
+            @include fonte($system-font, normal, 18px, #3d3d3d);
+        }
+    }
+}

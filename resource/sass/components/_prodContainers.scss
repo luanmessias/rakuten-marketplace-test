@@ -1,0 +1,46 @@
+.product {
+    @include flexbox(flex, row, wrap, space-between, flex-start, flex-start);
+    @include box-sizing;
+    @include transition;
+    width: 100%;
+    max-width: 1000px;
+    margin: 15px auto;
+    @include e("col") {
+    
+
+        @media #{$res-xs}{
+            width: 100%;
+        }
+        @media #{$res-sm}{
+            width: 100%;
+        }
+
+        @media #{$res-md}{
+            width: calc(50% - 10px);
+        }
+        @media #{$res-lg}{
+            width: calc(50% - 10px);
+        }
+        @media #{$res-xl}{
+            width: calc(50% - 10px);
+        }
+
+    }
+
+    @include e("row") {
+        width: 100%;
+        @include flexbox(flex, row, wrap, space-between, flex-start, flex-start);
+    }
+
+    .info{
+        @include flexbox(flex, row, nowrap, space-between, flex-start, flex-start);
+    }
+
+    .prices {
+        background-color: #cdcdcd;
+        margin-top: 20px;
+        padding: 20px;
+        position: relative;
+    }
+
+}
