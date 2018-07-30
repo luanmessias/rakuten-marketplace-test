@@ -5,3 +5,10 @@ body {
 a{
     text-decoration: none;
 }
+
+header, 
+footer{
+    @media #{$res-sm}{
+        display: none;
+    }
+}
