@@ -1,88 +1,123 @@
-# Project Title
+# Projeto teste Rakuten Brasil
+O documento tem como proposta apresentar o projeto, demonstrando os métodos, plugins e modos de trabalho utilizado.
 
-One Paragraph of project description goes here
+##	Arquivos
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
 
 ```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+Projeto
+├── resource
+|	├── angular
+|	├── css
+|	├── elevatezoom
+|	├── fancybox
+|	├── grunt
+|	├── img
+|	├── jquery
+|	├── js
+|	└── sass
+├──	index.html
+└───README.md
 
 ```
-Give an example
+
+## Descrição dos componentes
+
+### AngularJS  V1.x
+Utilizado para fazer a parte de acesso ao arquivo JSON e desenvolvimento do projeto, o arquivo de desenvolvimento esta neste diretório:
+
+```
+Projeto
+└── resource
+	├── ...
+	└── js
+		└── app.js
 ```
 
-### And coding style tests
+### CSS
+O CSS final compilado fica neste diretório, o projeto foi desenvolvido em SASS.
 
-Explain what these tests test and why
+### Elevate Zoom
+Plugin utilizado para habilitar a funcionalidade de Zoom na imagem principal do projeto.
+
+### Fancybox
+Utilizado para criar os modais de Calculo de frete e Inclusão de novas avaliações do produto.
+
+### Grunt
+Task Runner utilizado para trabalhar com SASS e compilar o CSS do projeto.
+
+### jQuery
+Utilizando como dependência dos plugins e em algumas funções no arquivo app.js
+
+###	JS
+Aqui esta localizado o arquivo data.js (Dados do projeto) e app.js (Parte de desenvolvimento do projeto)
+
+###	SASS
+Todo estilo do projeto esta aplicado aqui pasta. A separação de arquivos segue um padrão chamado ITCSS (Inverted Triangle CSS) ele serve para ordenar as declarações de estilos do menos especifico ao mais especifico para tornar o projeto mais escalável:
+
+![enter image description here](http://technotif.com/wp-content/uploads/2015/04/Manage-Large-CSS-Projects-With-ITCSS.jpg)
+
+
+A estrutura deste diretório ficou assim:
+
+**SETTINGS**
+
+Aqui se encontra as configurações globais e variáveis do projeto, fonte, cores, etc...
+
+**TOOLS**
+
+Neste diretório encontram-se os arquivos de funções, placeholders e mixins do projeto.
+
+ **GENERIC**
+ 
+CSS Normalize são aplicados nesta sessão.
+
+ **ELEMENTS**
+ 
+Todo estilo que precisa ser aplicado diretamente nas tags HTML estão aqui.
+
+ **OBJECTS**
+ 
+Sessão responsável por conter pequenos trechos de códigos ou objetos que podem ser utilizados em qualquer lugar do projeto, icons, animações, etc...
+
+ **COMPONENTS**
+ 
+Nesta sessão está praticamente todo código especifico do projeto, a página de detalhes do produto em pequenos arquivos de componentes:
 
 ```
-Give an example
+sass
+└── componetns
+	├── prodBuy.scss
+	├── prodContainers.scss
+	├── prodDesc.scss
+	├── prodInfo.scss	
+	├── prodModals.scss
+	├── prodOffers.scss
+	├── prodPhoto.scss
+	├── prodPoints.scss
+	├── prodRating.scss
+	├── prodRelated.scss
+	├── prodReviews.scss
+	├── prodSkus.scss
+	├── prodThumbs.scss
+	├── prodTools.scss
+	└── prodZoom.scss
+
 ```
 
-## Deployment
 
-Add additional notes about how to deploy this on a live system
+## BEM [Block Element Modifier]
+Utilizei esta metodologia para nomear as classes de meus componentes no projeto, mesmo sendo mais "verboso" o método tem como principal benéfico sua performance de leitura pelo Browser por garantir que a leitura das classes sejam únicas, garantindo que pouca leitura de tags será realizada.
 
-## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+## Fontes
 
-## Contributing
+ITCSS:
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+[Organizando seu CSS com ITCSS](https://willianjusten.com.br/organizando-seu-css-com-itcss/)
 
-## Versioning
+BEM:
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+[Google Developers: Reduzir o escopo e a complexidade dos cálculos de estilo](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations)
 
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 
