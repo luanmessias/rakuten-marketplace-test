@@ -3,13 +3,13 @@ var ProductData = {
 		"code" : "lp001tc",
 		"name" : "Capacho - Trouxe Cerveja",
 		"brand" : "Limpa Pé",
-		"description" : "<p><strong>Capacho - Trouxe Cerveja?</strong><br>Fibra vin�lica entrela�ada de 10 mm de altura.</p><p><strong>Recomenda��es da Limpa P�:</strong> Trouxe Cerveja? � o capacho mais famoso da Limpa P�. Sim! O mais querido dos mais queridos. �timo para deixar perto da churrasqueira ou quintais de entrada de festa. Faz a alegria da galera e vira coment�rio de todo churrasco... Mas e ai??? Trouxe Cerveja? </p><p><strong>Deixe sua porta famosa:</strong> Adorou o capacho na sua porta? Ent�o entre em <a href='http://limpape.loja.rakuten.com.br/institucional/5/615E30AD-EF39-4B5B-B78E-FC475449FFA5/'>contato</a>. Preencha seus dados que entraremos em contato para que voc� envie uma foto da sua porta.Colocaremos uma lista de portas famosas aqui!</p><a id='a-portas-famosas'></a><h3><span>Portas Famosas!</span></h3><ul>    <li>    <span>Fabiola (SC)</span>    <img alt='' src='http://resources.rakuten.com.br/Assets/limpape.loja.rakuten.com.br/images/layout/trouxe-cerveja-1.jpg' title='Capacho trouxe cerveja - Fabiola - SC'></li>    <li>    <span>Ricardo (SC)</span>    <img alt='' src='http://resources.rakuten.com.br/Assets/limpape.loja.rakuten.com.br/images/layout/trouxe-cerveja-2.jpg' title='Capacho trouxe cerveja - Ricardo - SC'></li></ul>",
-		"features" : "<p><strong>Mat�ria-Prima:</strong> PVC<br>PVC � um plastico derivado do petr�leo.<br>Eletronicamente recortado e colado por vulcaniza��o t�rmica.<br>Material at�xico, leve, resistente, anti-chamas, antiderrapante, dur�vel, ret�m sujeira e f�cil de lavar.<br>Tapete de uso interno e externo.</p><p><strong><strong>Infogr�fico:</strong> Como meu capacho � confeccionado?</strong></p><div class='infografico'><img class='info' alt='Meu Capacho Personalizado' src='http://resources.rakuten.com.br/Assets/limpape.loja.rakuten.com.br/images/layout/Infografico-Limpa-Pe-p1.jpg'><img class='info' alt='Meu Capacho Personalizado' src='http://resources.rakuten.com.br/Assets/limpape.loja.rakuten.com.br/images/layout/Infografico-Limpa-Pe-p2.jpg'><img class='info' alt='Meu Capacho Personalizado' src='http://resources.rakuten.com.br/Assets/limpape.loja.rakuten.com.br/images/layout/Infografico-Limpa-Pe-p3.jpg'></div><p><strong>Qual o melhor capacho para minha casa?</strong></p><div class='img'><img class='doors' alt='Exemplo de capachos em portas pad�o' src='http://resources.rakuten.com.br/Assets/limpape.loja.rakuten.com.br/images/layout/Exemplo-Portas.png'></div>",
+		"description" : "<p><strong>Capacho - Trouxe Cerveja?</strong><br>Fibra vinílica entrelaçada de 10 mm de altura.</p><p><strong>Recomendações da Limpa Pó:</strong> Trouxe Cerveja? O capacho mais famoso da Limpa Po. Sim! O mais querido dos mais queridos. Ótimo para deixar perto da churrasqueira ou quintais de entrada de festa. Faz a alegria da galera e vira comentario de todo churrasco... Mas e ai??? Trouxe Cerveja? </p><p><strong>Deixe sua porta famosa:</strong> Adorou o capacho na sua porta? Entao entre em <a href='http://limpape.loja.rakuten.com.br/institucional/5/615E30AD-EF39-4B5B-B78E-FC475449FFA5/'>contato</a>. Preencha seus dados que entraremos em contato para que voce envie uma foto da sua porta.Colocaremos uma lista de portas famosas aqui!</p><a id='a-portas-famosas'></a><h3><span>Portas Famosas!</span></h3><ul>    <li>    <span>Fabiola (SC)</span>    <img alt='' src='http://resources.rakuten.com.br/Assets/limpape.loja.rakuten.com.br/images/layout/trouxe-cerveja-1.jpg' title='Capacho trouxe cerveja - Fabiola - SC'></li>    <li>    <span>Ricardo (SC)</span>    <img alt='' src='http://resources.rakuten.com.br/Assets/limpape.loja.rakuten.com.br/images/layout/trouxe-cerveja-2.jpg' title='Capacho trouxe cerveja - Ricardo - SC'></li></ul>",
+		"features" : "<p><strong>Materia-Prima:</strong> PVC<br>PVC E um plastico derivado do petroleo.<br>Eletronicamente recortado e colado por vulcanizacao termica.<br>Material atoxico, leve, resistente, anti-chamas, antiderrapante, duravel, retom sujeira e facil de lavar.<br>Tapete de uso interno e externo.</p><p><strong><strong>Infografico:</strong> Como meu capacho e confeccionado?</strong></p><div class='infografico'><img class='info' alt='Meu Capacho Personalizado' src='http://resources.rakuten.com.br/Assets/limpape.loja.rakuten.com.br/images/layout/Infografico-Limpa-Pe-p1.jpg'><img class='info' alt='Meu Capacho Personalizado' src='http://resources.rakuten.com.br/Assets/limpape.loja.rakuten.com.br/images/layout/Infografico-Limpa-Pe-p2.jpg'><img class='info' alt='Meu Capacho Personalizado' src='http://resources.rakuten.com.br/Assets/limpape.loja.rakuten.com.br/images/layout/Infografico-Limpa-Pe-p3.jpg'></div><p><strong>Qual o melhor capacho para minha casa?</strong></p><div class='img'><img class='doors' alt='Exemplo de capachos em portas padrao' src='http://resources.rakuten.com.br/Assets/limpape.loja.rakuten.com.br/images/layout/Exemplo-Portas.png'></div>",
 		"video" : "https://www.youtube.com/embed/MU2tLPPSeXA",
 		"superpoints" : 75,
 		"categories" : [
-			"Artesanato e Decora��o",
-			"Casa e Decora��o",
+			"Artesanato e Decoraçao",
+			"Casa e Decoração",
 			"Capacho"
 		]
 	},	
@@ -230,16 +230,16 @@ var ProductData = {
 			"customerName" : "John Doe",
 			"customerEmail" : "john.doe@unknow.com.br",
 			"rating" : 5,
-			"comment" :  "Gostei muito do meu capacho! Parab�ns!"
+			"comment" :  "Gostei muito do meu capacho! Parabéns!"
 		},
 		{
-			"customerName" : "Z� Ninguem",
+			"customerName" : "Zé Ninguem",
 			"customerEmail" : "ze.ninguem@unknow.com.br",
 			"rating" : 1,
-			"comment" :  "N�o gostei do capacho, achei que era maior."
+			"comment" :  "Não gostei do capacho, achei que era maior."
 		},
 		{
-			"customerName" : "Maria Jos�",
+			"customerName" : "Maria José",
 			"customerEmail" : "maria.jose@unknow.com.br",
 			"rating" : 4,
 			"comment" :  "O produto demorou um pouco mas quando chegou fiquei muito satisfeita. Valeu a pena."
@@ -248,13 +248,13 @@ var ProductData = {
 			"customerName" : "Mickey Mouse",
 			"customerEmail" : "mickey.mouse@unknow.com.br",
 			"rating" : 5,
-			"comment" :  "Perfeito o capachou, ficou muito bom em minha porta. Gostaria de agradecer a todos pelo produto, pela equipe, pelo atendimento, pelo pre�o, pelo frete, por tudo. Muitoooooooooo obrigado."
+			"comment" :  "Perfeito o capachou, ficou muito bom em minha porta. Gostaria de agradecer a todos pelo produto, pela equipe, pelo atendimento, pelo preço, pelo frete, por tudo. Muitoooooooooo obrigado."
 		},
 		{
 			"customerName" : "Wanderlei Silva",
 			"customerEmail" : "wanderlei.silva@unknow.com.br",
 			"rating" : 2,
-			"comment" :  "N�o curti n�o, pensei que seria melhor mas fazer o que n�....."
+			"comment" :  "Não curti não, pensei que seria melhor mas fazer o que né....."
 		}
 	],
 	"delivery" : [
@@ -282,21 +282,21 @@ var ProductData = {
 	],
 	"relatedProducts" : [
 		{
-			"name" : "Capacho - Ah n�o! Voc� de Novo?",
+			"name" : "Capacho - Ah não! Você de Novo?",
 			"url" : "http://limpape.produto.rakuten.com.br/capacho-ah-nao-voce-de-novo.aspx?p=1",
 			"image" : "http://rakuten-imagens.com.br/produtos/615e30ad-ef39-4b5b-b78e-fc475449ffa5/d0/2a209f73-5b47-4a04-b473-a876c02483d0/2a209f73-5b47-4a04-b473-a876c02483d0_main.jpg",
 			"price" : "A partir de R$ 74,90",
 			"parcels" : "2x de R$ 37,45 sem juros"
 		},
 		{
-			"name" : "Capacho - n�o Trouxe Cerveja? Vai Buscar!",
+			"name" : "Capacho - não Trouxe Cerveja? Vai Buscar!",
 			"url" : "http://limpape.produto.rakuten.com.br/capacho-nao-trouxe-cerveja-va-buscar.aspx?p=1",
 			"image" : "http://rakuten-imagens.com.br/produtos/615e30ad-ef39-4b5b-b78e-fc475449ffa5/6a/51e78e2e-b628-40ee-9670-6556853ab06a/51e78e2e-b628-40ee-9670-6556853ab06a_main.jpg",
 			"price" : "A partir de R$ 74,90",
 			"parcels" : "2x de R$ 37,45 sem juros"
 		},
 		{
-			"name" : "Capacho Promo��o - Trouxe Cerveja - Leve 2 por Menos",
+			"name" : "Capacho Promoção - Trouxe Cerveja - Leve 2 por Menos",
 			"url" : "http://limpape.produto.rakuten.com.br/capacho-promocao-trouxe-cerveja-leve-2-por-menos.aspx?p=1",
 			"image" : "http://rakuten-imagens.com.br/produtos/615e30ad-ef39-4b5b-b78e-fc475449ffa5/4d/2d2d10a8-ea5e-4f98-9570-e205af37264d/2d2d10a8-ea5e-4f98-9570-e205af37264d_main.jpg",
 			"price" : "De R$ 150,00 Por R$ 130,00",
