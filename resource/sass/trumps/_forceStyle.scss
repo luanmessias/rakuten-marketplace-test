@@ -1,9 +1,9 @@
 .zoomWrapper{
     @media #{$res-sm}{
-        height: auto;
-        width: 100%;
+        height: auto !important;
+        width: 100% !important;
         .mainPhoto__zoom__photo{
-            position: inherit;
+            position: inherit !important;
         }
     }
 }
